@@ -1,0 +1,1034 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Creating a campaign - Tango Targeting Docs</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Tango Targeting Docs" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../../images/tango-blue.svg" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  User Guide
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Engagement
+                </span>
+              
+            
+            Creating a campaign
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../.." title="Overview" class="md-tabs__link">
+          Overview
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../what-is-a-campaign/" title="User Guide" class="md-tabs__link md-tabs__link--active">
+          User Guide
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../developer-guide/android/installation/" title="Developers" class="md-tabs__link">
+          Developers
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../reference/" title="API Reference" class="md-tabs__link">
+          API Reference
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../../images/tango-blue.svg">
+        
+      
+    </div>
+    Tango Targeting Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Engagement
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Engagement
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../what-is-a-campaign/" title="What is a campaign?" class="md-nav__link">
+      What is a campaign?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Creating a campaign
+      </label>
+    
+    <a href="./" title="Creating a campaign" class="md-nav__link md-nav__link--active">
+      Creating a campaign
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enter-your-account" title="Enter your account" class="md-nav__link">
+    Enter your account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" title="Type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-the-message" title="Content (The Message)" class="md-nav__link">
+    Content (The Message)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifics" title="Specifics" class="md-nav__link">
+    Specifics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audience" title="Audience" class="md-nav__link">
+    Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sendactivate" title="Send/Activate" class="md-nav__link">
+    Send/Activate
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scheduled-campaigns/" title="Scheduled campaigns" class="md-nav__link">
+      Scheduled campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../location-campaigns/" title="Location campaigns" class="md-nav__link">
+      Location campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../automated-campaigns/" title="Automated campaigns" class="md-nav__link">
+      Automated campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../search-campaigns/" title="Search campaigns" class="md-nav__link">
+      Search campaigns
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Segmentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Segmentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../segmentation/what-is-a-segment/" title="What is a segment?" class="md-nav__link">
+      What is a segment?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../segmentation/supported-segments/" title="Supported segments" class="md-nav__link">
+      Supported segments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Insights
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Insights
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insights/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../insights/campaign-reports/" title="Campaign reports" class="md-nav__link">
+      Campaign reports
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Developers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Developers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Android
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Android
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/android/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/android/handle-custom-actions/" title="Handle custom actions" class="md-nav__link">
+      Handle custom actions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/android/trigger-automated-campaigns/" title="Trigger automated campaigns" class="md-nav__link">
+      Trigger automated campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/android/manage-tags/" title="Manage tags" class="md-nav__link">
+      Manage tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      iOS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        iOS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/ios/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/ios/prepare-and-initialize/" title="Prepare and initialize" class="md-nav__link">
+      Prepare and initialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/ios/handle-custom-actions/" title="Handle custom actions" class="md-nav__link">
+      Handle custom actions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/ios/trigger-automated-campaigns/" title="Trigger automated campaigns" class="md-nav__link">
+      Trigger automated campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/ios/manage-tags/" title="Manage tags" class="md-nav__link">
+      Manage tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Cordova
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Cordova
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/cordova/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/cordova/android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../developer-guide/cordova/ios/" title="iOS" class="md-nav__link">
+      iOS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      API Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        API Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../reference/" title="Reference" class="md-nav__link">
+      Reference
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enter-your-account" title="Enter your account" class="md-nav__link">
+    Enter your account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type" title="Type" class="md-nav__link">
+    Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-the-message" title="Content (The Message)" class="md-nav__link">
+    Content (The Message)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifics" title="Specifics" class="md-nav__link">
+    Specifics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audience" title="Audience" class="md-nav__link">
+    Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sendactivate" title="Send/Activate" class="md-nav__link">
+    Send/Activate
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Creating a campaign</h1>
+                
+                <p><img alt="Steps for creating a campaign" src="../../../images/content/steps-for-creating-a-campaign.png" /></p>
+<p>In this section we will walk you through the process of creating a campaign. </p>
+<p>Suppose Penguin Airlines has 50% discounts for all destinations on its 5<sup>th</sup> Anniversary Celebration. The goal of the campaign is to send a real time message (push notification) to all users to inform them about this special offer and allow them to quickly book flights.</p>
+<p>To create a campaign the <strong>Campaigns</strong> tab in the left side menu must be selected. Once we are there we will press the blue button in the top right corner labeled <em>New Campaign</em>.</p>
+<h3 id="enter-your-account">Enter your account<a class="headerlink" href="#enter-your-account" title="Permanent link">&para;</a></h3>
+<p>If you don't have an account yet, create one by starting a demo at <a href="https://app.tangotargeting.com/demo-request">this URL</a>. Then, to be able to test the campaigns, please install the <a href="">Android</a> or <a href="">iOS</a> app on your phone and scan the QR code from your Tango account.</p>
+<h3 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<p>The first step in creating a campaign is to determine its type. In the image below is represented what we see in the Tango Console. </p>
+<p><img alt="Create Campaign Step 1 (Type)" src="../../../images/content/create-campaign-step-type.png" /></p>
+<p>Following this section are details for each campaign type. For this scenario we will create a <strong>Scheduled Campaign</strong> which is at the top of the list.</p>
+<h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
+<p>The next thing we'll see is a screen were we will add some details about our campaign.</p>
+<p><img alt="Create Campaign Step 2 (Details)" src="../../../images/content/create-campaign-step-details.png" /></p>
+<p>Apart from specifying the campaign name, this step is the only one that differs for each campaign type. Every campaign must have a name for easy identification. Thus, the name must be unique. We will call ours <strong>5<sup>th</sup> Anniversary Celebration Discount</strong>. </p>
+<p>We chose to create a scheduled campaign, but now we are given three options. We said we want to send the our offer in real time, meaning we want a push notification, so we will choose to <strong>Send immediately</strong>. For more on real-time campaigns check [[Real-time]] campaigns page. The other two options are discussed in [[Specific dates]]  campaigns and [[Recurrent]] campaigns.</p>
+<h3 id="content-the-message">Content (The Message)<a class="headerlink" href="#content-the-message" title="Permanent link">&para;</a></h3>
+<p>Scrolling down and clicking the <strong>Continue</strong> button will take us to the screen where we will build the content presented to the user when the notification is received.</p>
+<p><img alt="Create Campaign Step 3 (Content)" src="../../../images/content/create-campaign-step-content.png" /></p>
+<p>Let's add a title the title "Celebrate Penguin Airlines" and a body that describes the offer. Also, we must add the primary action. In our case it will take the user to the home page of Penguin Airlines website where the user can start booking flights and find additional information about the offer. We could add a secondary action that could open another web page with other ways to benefit of the offer, like becoming a member.</p>
+<p>It is also a good idea to add an image with the company logo (maybe with some fireworks in this case) for a stronger impact on the user. </p>
+<p>Now that we have our content built, lets move to the next step.</p>
+<h3 id="specifics">Specifics<a class="headerlink" href="#specifics" title="Permanent link">&para;</a></h3>
+<p><img alt="Create campaign Step 4 (Specifics)" src="../../../images/content/create-campaign-step-specifics.png" /></p>
+<p>Here we have some rules for displaying the message, such as how many devices should receive the message or the maximum displays for each device, etc. Most probably, we will rarely use these rules but it is good to know them if we have some limitations for our campaign. For instance, if we had only 1000 discounts available, we could set the <em>Device limit</em> to 1000.</p>
+<p>We are happy with the default values as we want our campaign to reach as many customers as possible, so we will simply move on to the next step.</p>
+<h3 id="audience">Audience<a class="headerlink" href="#audience" title="Permanent link">&para;</a></h3>
+<p><img alt="Create campaign step 5 (Audience)" src="../../../images/content/create-campaign-step-audience.png" /></p>
+<p>We are almost done. Before sending the campaign we have to decide who should receive it. First of all, we may have several applications added to our account. We will choose the ones that are of interest to us. </p>
+<p>After selecting the the apps, we can filter further by adding tags. Tags are some strings defining a certain group of users (e.g.: "student", "shopper", etc.). We will ignore tags for now, but more information about them is in section [[What is a segment?]].</p>
+<p>Further below are other filters that may e handy to us. For instance, we may want to send the campaign to LG devices only, for that we can check the name of the device in the <em>Name</em> dropdown field. </p>
+<p>Note that only the filters that have actual data on the server will be displayed, for example if no iPhone device have yet used our app then no iPhone data will reach Tango servers and <strong>iPhone</strong> will not appear in the <em>Name</em> filter.</p>
+<p>Getting back to our scenario, lets suppose we don't want to filter anything, so wi will continue with finishing the creating our campaign. We'll hit <strong>Continue</strong> and see a screen with the overview of our campaign. If we missed something or want to make changes to the campaign we can do that by pressing the <strong>Edit</strong> button. Otherwise we will continue with submitting the campaign.</p>
+<p><img alt="Create campaign submit" src="../../../images/content/create-campaign-submit.png" /></p>
+<h3 id="sendactivate">Send/Activate<a class="headerlink" href="#sendactivate" title="Permanent link">&para;</a></h3>
+<p>Once we have finished and submitted our campaign we will see it at the top of the campaigns list under <em>Drafts</em>.</p>
+<p><img alt="Create campaign send" src="../../../images/content/create-campaign-send.png" /></p>
+<p>For real-time campaigns we have the "SEND NOW" option. All the other campaigns have "ACTIVATE". The difference is that real-time campaigns are pushed immediately to all devices, whilst the others reach the devices when the devices are ready to synchronize with the server data. The latter ensures that all matching devices will receive the campaign.</p>
+<p>Pressing "SEND NOW" will open a confirmation dialog which also informs us about the number of targeted devices and the option to "PROCEED" or "POSTPONE". When we are sure we want to send it we will hit "PROCEED". The next thing we would most likely want to do is to see the impact our campaign had: how many devices where reached, how many users saw the message and how many started booking a flight, etc. This information is available when clicking the the campaign in the <em>In Progress</em> campaign list.</p>
+<p><img alt="Create campaign statistics" src="../../../images/content/create%20campaign-step-statistics.png" /></p>
+<p>More information about campaign insights is covered in the [[Insights]] section.</p>
+<p>We are done.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../what-is-a-campaign/" title="What is a campaign?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                What is a campaign?
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../scheduled-campaigns/" title="Scheduled campaigns" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Scheduled campaigns
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
