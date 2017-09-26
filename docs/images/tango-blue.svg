@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>tango-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1976D2" offset="0%"></stop>
+            <stop stop-color="#004BA0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M612.435002,830.475469 C527.236894,830.475469 484.63784,789.357771 484.63784,707.122376 L484.63784,394.36592 L612.435002,394.36592 L612.435002,325.368646 L484.63784,325.368646 L484.63784,132.082724 L411.06472,132.082724 L411.06472,719.752386 C411.06472,834.358027 478.188147,891.660849 612.435002,891.660849 L612.435002,830.475469 L612.435002,830.475469 L612.435002,830.475469 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tango-blue">
+            <circle id="Oval" fill="#FFFFFF" cx="512" cy="512" r="512"></circle>
+            <g id="Shape" fill-rule="nonzero">
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <path stroke="url(#linearGradient-1)" stroke-width="20" d="M494.63784,315.368646 L622.435002,315.368646 L622.435002,404.36592 L494.63784,404.36592 L494.63784,707.122376 C494.63784,783.754178 532.682097,820.475469 612.435002,820.475469 L622.435002,820.475469 L622.435002,901.660849 L612.435002,901.660849 C472.985283,901.660849 401.06472,840.262745 401.06472,719.752386 L401.06472,122.082724 L494.63784,122.082724 L494.63784,315.368646 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

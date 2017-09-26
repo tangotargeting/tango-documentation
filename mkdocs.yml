@@ -1,0 +1,71 @@
+theme: 'material'
+site_name: Tango Targeting Docs
+site_favicon: 'images/favicon.ico'
+extra:
+  logo: 'images/tango-blue.svg'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  feature:
+    tabs: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
+
+# Page tree
+pages:
+  - Overview:
+    - Welcome: index.md
+  - User Guide:
+    - Engagement:
+      - What is a campaign?: user-guide/engagement/what-is-a-campaign.md
+      - Creating a campaign: user-guide/engagement/creating-a-campaign.md
+      - Scheduled campaigns: user-guide/engagement/scheduled-campaigns.md
+      - Location campaigns: user-guide/engagement/location-campaigns.md
+      - Automated campaigns: user-guide/engagement/automated-campaigns.md
+      - Search campaigns: user-guide/engagement/search-campaigns.md
+    - Segmentation:
+      - What is a segment?: user-guide/segmentation/what-is-a-segment.md
+      - Supported segments: user-guide/segmentation/supported-segments.md
+    - Insights:
+      - Overview: user-guide/insights/overview.md
+      - Campaign reports: user-guide/insights/campaign-reports.md
+  - Developers:
+    - Android:
+      - Installation: developer-guide/android/installation.md
+      - Handle custom actions: developer-guide/android/handle-custom-actions.md
+      - Trigger automated campaigns: developer-guide/android/trigger-automated-campaigns.md
+      - Manage tags: developer-guide/android/manage-tags.md
+    - iOS:
+      - Installation: developer-guide/ios/installation.md
+      - Prepare and initialize: developer-guide/ios/prepare-and-initialize.md
+      - Handle custom actions: developer-guide/ios/handle-custom-actions.md
+      - Trigger automated campaigns: developer-guide/ios/trigger-automated-campaigns.md
+      - Manage tags: developer-guide/ios/manage-tags.md
+    - Cordova:
+      - Overview: developer-guide/cordova/overview.md
+      - Android: developer-guide/cordova/android.md
+      - iOS: developer-guide/cordova/ios.md
+  - API Reference: 
+      - Reference: reference.md
+
