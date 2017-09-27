@@ -431,6 +431,11 @@
             "title": "Location campaigns"
         }, 
         {
+            "location": "/developer-guide/windows/overview/", 
+            "text": "Important\n\n\nIn order to run Tango on your Windows desktop, please \nDownload and Install our Windows app\n.", 
+            "title": "Windows"
+        }, 
+        {
             "location": "/samples/samples/", 
             "text": "", 
             "title": "Android"
