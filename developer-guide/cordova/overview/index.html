@@ -766,13 +766,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-your-tango-api-key" title="Find your Tango API Key" class="md-nav__link">
-    Find your Tango API Key
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#prepare-the-sdk" title="Prepare the SDK" class="md-nav__link">
     Prepare the SDK
   </a>
@@ -1009,13 +1002,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-your-tango-api-key" title="Find your Tango API Key" class="md-nav__link">
-    Find your Tango API Key
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#prepare-the-sdk" title="Prepare the SDK" class="md-nav__link">
     Prepare the SDK
   </a>
@@ -1093,19 +1079,19 @@
 <li><a href="../ios/">iOS</a></li>
 </ul>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<h3 id="find-your-tango-api-key">Find your Tango API Key<a class="headerlink" href="#find-your-tango-api-key" title="Permanent link">&para;</a></h3>
-<p>The following step requires you to provide the Tango API Key. The easiest way to locate it is to access <a href="https://app.tangotargeting.com/integration/android">https://app.tangotargeting.com/integration/android</a>. This is the documentation for integrating Tango with Android. At point 3 you will be able to see the API Key filled in. See the picture below. </p>
-<p><img alt="API Key location" src="../../../images/content/tango-sdk-api-key-location.png" /></p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>Make sure you <strong>use the Tango API Key</strong> described above, <strong>NOT</strong> the <del>Public API Key</del>.</p>
-</div>
 <h3 id="prepare-the-sdk">Prepare the SDK<a class="headerlink" href="#prepare-the-sdk" title="Permanent link">&para;</a></h3>
 <p>In order to use it correctly, Tango Targeting SDK should be initialized as soon as possible when your Cordova App launches. In your project's <strong><em>index.js</em></strong> add the following line at the top of your <code>onDeviceReady</code> method.</p>
-<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">TangoPlugin</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="s1">&#39;your-tango-api-key&#39;</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">TangoPlugin</span><span class="p">.</span><span class="nx">initialize</span><span class="p">(</span><span class="s1">&#39;your-tango-sdk-key&#39;</span><span class="p">);</span>
 </pre></div>
 
 <p>This will register the device on TangoTargeting and prepare it for consuming campaigns.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To find your Tango API KEY <a href="https://app.tangotargeting.com/">Go to Console <i class="fa fa-external-link"></i></a> and locate the card <strong>Tango SDK Key</strong>
+<img alt="Dashboard Overview" src="../../../images/content/locate-apikey-overview.png" />
+then hover it and click the copy icon on the right.
+<img alt="Tango SDK Key" src="../../../images/content/locate-api-key-copy.png" /></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Explicitly initializing Tango is only needed for iOS. On Android the SDK auto-initializez, provided it can find the API Key in the manifest file. See <a href="https://github.com/tangotargeting/cordova-plugin-tango/blob/master/INSTALLATION-Android.md">Android Installation</a>.</p>
@@ -1199,6 +1185,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/tangotargeting" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

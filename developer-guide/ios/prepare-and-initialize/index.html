@@ -933,6 +933,13 @@
 <span class="n">Tango</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">tango</span><span class="p">:</span> <span class="s">&quot;your-tango-sdk-key&quot;</span><span class="p">)</span>
 </pre></div>
 
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To find your Tango API KEY <a href="https://app.tangotargeting.com/">Go to Console <i class="fa fa-external-link"></i></a> and locate the card <strong>Tango SDK Key</strong>
+<img alt="Dashboard Overview" src="../../../images/content/locate-apikey-overview.png" />
+then hover it and click the copy icon on the right.
+<img alt="Tango SDK Key" src="../../../images/content/locate-api-key-copy.png" /></p>
+</div>
 <p>After that you should implement the following delegate methods.
 <div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="n">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Tango</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">)</span>
@@ -1055,6 +1062,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/tangotargeting" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
