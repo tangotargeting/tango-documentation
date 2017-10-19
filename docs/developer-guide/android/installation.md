@@ -41,13 +41,16 @@ In `AndroidManifest.xml`, add the `meta-data` containing your Tango API key:
     ...
  	<meta-data
         android:name="tango_api_key"
-        android:value="API_KEY"/>
+        android:value="your-tango-sdk-key"/>
     ...
 </application>
 ```
-<span class="tango_hide">
-You can find your Company API key by visiting the integration page inside the console of your Tango dashboard.
-</span>
+
+!!! Important
+    To find your Tango API KEY [Go to Console :fa-external-link:](https://app.tangotargeting.com/) and locate the card **Tango SDK Key**
+    ![Dashboard Overview](../../images/content/locate-apikey-overview.png)
+    then hover it and click the copy icon on the right.
+    ![Tango SDK Key](../../images/content/locate-api-key-copy.png)
 
 ### Setup Firebase in your project
 
@@ -122,7 +125,8 @@ Tango SDK relies on the following permissions:
 
 You do not need to add these permissions to your Android Manifest file. However, if your ` targetSdkVersion` is higher than **22** you will need to request the `android.permission.ACCESS_FINE_LOCATION` and `android.permission.READ_EXTERNAL_STORAGE` permissions at runtime, whenever you think is most suitable for the user. [Here][4] is how to request a persmission at runtime.
 
-There are open-source libraries that can help you manage runtime permissions. Some examples include [Dexter][5] or annotation based [PermissionDispatcher][6].
+!!! important
+    There are open-source libraries that can help you manage runtime permissions. Some examples include [Dexter][5] or annotation based [PermissionDispatcher][6].
 
 ## You are ready to go!
 

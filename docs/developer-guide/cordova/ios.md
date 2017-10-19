@@ -1,5 +1,5 @@
 # Cordova iOS installation
-
+### Prepare platform
 1.  If you don't have the iOS platform in your project, use the following line to add it:
 ```
 cordova platform add ios
@@ -21,7 +21,7 @@ Go to `"yourCordovaProject"/platforms/ios` and open `Podfile`, then add the `Tan
 ```
 target 'Your-NotificationServiceExtesion-Target-Name' do
 	use_frameworks!
-	pod 'TangoRichNotification', '~> 1.0.1'
+	pod 'TangoRichNotification', '~> 1.0.11'
 end
 ```
 

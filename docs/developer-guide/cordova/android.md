@@ -13,6 +13,12 @@ Tango Targeting SDK auto-initializez on Android. However, it needs to read your 
 </platform>
 ```
 
+!!! Important
+    To find your Tango API KEY [Go to Console :fa-external-link:](https://app.tangotargeting.com/) and locate the card **Tango SDK Key**
+    ![Dashboard Overview](../../images/content/locate-apikey-overview.png)
+    then hover it and click the copy icon on the right.
+    ![Tango SDK Key](../../images/content/locate-api-key-copy.png)
+
 ## Enable Tango logs
 
 If you want to see Tango logs add a `tango_debug_mode` `meta-data` set to `true` to your android platform.

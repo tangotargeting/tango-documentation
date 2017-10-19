@@ -23,6 +23,12 @@ UNUserNotificationCenter.current().delegate = self
 Tango.initialize(tango: "your-tango-sdk-key")
 ```
 
+!!! Important
+    To find your Tango API KEY [Go to Console :fa-external-link:](https://app.tangotargeting.com/) and locate the card **Tango SDK Key**
+    ![Dashboard Overview](../../images/content/locate-apikey-overview.png)
+    then hover it and click the copy icon on the right.
+    ![Tango SDK Key](../../images/content/locate-api-key-copy.png)
+
 After that you should implement the following delegate methods.
 ```swift
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -88,7 +94,7 @@ with:
 
 ```swift
 if let bestAttemptContent = bestAttemptContent {
-    TangoRichNotification.setupRichContent(content: bestAttemptContent,  apiKey: "apiKey", completionHandler: { (content) in contentHandler(content)})
+    TangoRichNotification.setupRichContent(content: bestAttemptContent,  apiKey: "your-tango-sdk-key", completionHandler: { (content) in contentHandler(content)})
 }
 ```
 

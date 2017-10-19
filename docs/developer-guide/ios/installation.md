@@ -3,7 +3,7 @@
 - iOS 9.0+ for Tango framework only
 - iOS 10.0+ if you use both Tango and TangoRichNotification framework
 - Xcode 8.1+
-- Swift 3.1
+- Swift 3.2+
 
 ### Manual installation
 
@@ -34,7 +34,7 @@ In project folder it will appear a file called Podfile. Open it and integrate Ta
 ```
 target 'TargetName' do
 use_frameworks!
-pod 'Tango', '~> 1.0.6'
+pod 'Tango', '~> 1.0.11'
 end
 ```
 
@@ -61,7 +61,7 @@ Add a new target for notification extension in your podfile. Add TangoRichNotifi
 ```
 target 'NotificationServiceExtesion-Target-Name' do
 use_frameworks!
-pod 'TangoRichNotification', '~> 1.0.1'
+pod 'TangoRichNotification', '~> 1.0.11'
 end
 ```
 After filling Podfile save it and run the following command in a Terminal window:

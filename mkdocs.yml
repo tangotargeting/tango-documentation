@@ -8,6 +8,9 @@ extra:
     accent: 'indigo'
   feature:
     tabs: true
+  social:
+    - type: 'github'
+      link: 'https://github.com/tangotargeting'
 
 # Extensions
 markdown_extensions:
@@ -31,6 +34,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist(custom_checkbox=true)
   - pymdownx.tilde
+  - fontawesome_markdown
 
 # Page tree
 pages:
@@ -66,6 +70,9 @@ pages:
       - Overview: developer-guide/cordova/overview.md
       - Android: developer-guide/cordova/android.md
       - iOS: developer-guide/cordova/ios.md
+    - Windows: developer-guide/windows/overview.md
+  - Samples:
+    - Android: samples/samples.md
   - API Reference: 
       - Reference: reference.md
 

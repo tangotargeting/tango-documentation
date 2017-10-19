@@ -30,24 +30,21 @@ cordova plugin add https://github.com/tangotargeting/cordova-plugin-tango.git
 
 ## Usage
 
-### Find your Tango API Key
-
-The following step requires you to provide the Tango API Key. The easiest way to locate it is to access https://app.tangotargeting.com/integration/android. This is the documentation for integrating Tango with Android. At point 3 you will be able to see the API Key filled in. See the picture below. 
-
-![API Key location](../../images/content/tango-sdk-api-key-location.png)
-
-!!! Caution 
-	Make sure you **use the Tango API Key** described above, **NOT** the ~~Public API Key~~.
-
 ### Prepare the SDK
 
 In order to use it correctly, Tango Targeting SDK should be initialized as soon as possible when your Cordova App launches. In your project's ***index.js*** add the following line at the top of your `onDeviceReady` method.
 
 ``` javascript
-window.TangoPlugin.initialize('your-tango-api-key');
+window.TangoPlugin.initialize('your-tango-sdk-key');
 ```
 
 This will register the device on TangoTargeting and prepare it for consuming campaigns.
+
+!!! Important
+    To find your Tango API KEY [Go to Console :fa-external-link:](https://app.tangotargeting.com/) and locate the card **Tango SDK Key**
+    ![Dashboard Overview](../../images/content/locate-apikey-overview.png)
+    then hover it and click the copy icon on the right.
+    ![Tango SDK Key](../../images/content/locate-api-key-copy.png)
 
 !!! note
 	Explicitly initializing Tango is only needed for iOS. On Android the SDK auto-initializez, provided it can find the API Key in the manifest file. See [Android Installation](https://github.com/tangotargeting/cordova-plugin-tango/blob/master/INSTALLATION-Android.md).
