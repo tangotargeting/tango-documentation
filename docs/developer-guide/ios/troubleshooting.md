@@ -18,7 +18,9 @@ post_install do |installer|
 end
 ```
 
-In Tango's case, Alamofire needs to have it's SWIFT_VERSION version set to 4.0.
+!!! note
+    In Tango's case, our only dependency, Alamofire, needs to have it's SWIFT_VERSION version set to 4.0.
+
 
 ### Rich Push Notification image not showing
 
