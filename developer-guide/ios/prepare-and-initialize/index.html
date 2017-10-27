@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../../images/favicon.ico">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -38,6 +53,8 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    
+      <link rel="stylesheet" href="../../../css/tab.css">
     
     
   </head>
@@ -104,8 +121,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -122,6 +139,7 @@
 </header>
     
     <div class="md-container">
+      
       
       
         
@@ -222,13 +240,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../../images/tango-blue.svg">
         
       
-    </div>
+    </span>
     Tango Targeting Docs
   </label>
   
@@ -706,6 +724,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -919,20 +949,116 @@
                 <p>After adding the framework into the project by following the <a href="../installation/">Installation</a> guide, modify your source code to finalize the integration:</p>
 <h3 id="tango-framework">Tango framework<a class="headerlink" href="#tango-framework" title="Permanent link">&para;</a></h3>
 <p>Open your project AppDelegate.m file and import the Tango framework.</p>
-<div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">Tango</span>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-0-swift" aria-controls="tab-0-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-0-objc" aria-controls="tab-0-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-0-swift">
+            <div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">Tango</span>
 <span class="kd">import</span> <span class="nc">UserNotifications</span>
 </pre></div>
 
-<p>Add <code>UNUserNotificationCenterDelegate</code> in app delegate: 
-<div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span><span class="p">,</span> <span class="n">UNUserNotificationCenterDelegate</span> <span class="p">{}</span>
-</pre></div></p>
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-0-objc">
+            <div class="codehilite"><pre><span></span><span class="cp">#import &lt;Tango/Tango-Swift.h&gt;</span>
+<span class="cp">#import &lt;Tango/Tango.h&gt;</span>
+<span class="cp">#import &lt;UserNotifications/UserNotifications.h&gt;</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
+<p>Add <code>UNUserNotificationCenterDelegate</code> in app delegate:</p>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-1-swift" aria-controls="tab-1-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-1-objc" aria-controls="tab-1-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-1-swift">
+            <div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span><span class="p">,</span> <span class="n">UNUserNotificationCenterDelegate</span> <span class="p">{}</span>
+</pre></div>
+
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-1-objc">
+            <div class="codehilite"><pre><span></span><span class="k">@interface</span> <span class="nc">AppDelegate</span> : <span class="bp">UIResponder</span> <span class="o">&lt;</span><span class="bp">UIApplicationDelegate</span><span class="p">,</span> <span class="n">UNUserNotificationCenterDelegate</span><span class="o">&gt;</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <p>In the <code>didFinishLaunchingWithOptions</code>, setup notification delegate and initialize the Tango Targeting SDK with your Tango SDK key by calling <code>Tango.initialize()</code>.</p>
-<div class="codehilite"><pre><span></span><span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-2-swift" aria-controls="tab-2-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-2-objc" aria-controls="tab-2-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-2-swift">
+            <div class="codehilite"><pre><span></span><span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
 
 <span class="c1">// Initialize with API key</span>
 <span class="n">Tango</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">tango</span><span class="p">:</span> <span class="s">&quot;your-tango-sdk-key&quot;</span><span class="p">)</span>
 </pre></div>
 
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-2-objc">
+            <div class="codehilite"><pre><span></span><span class="n">UNUserNotificationCenter</span> <span class="o">*</span><span class="n">center</span> <span class="o">=</span> <span class="p">[</span><span class="n">UNUserNotificationCenter</span> <span class="n">currentNotificationCenter</span><span class="p">];</span>
+<span class="n">center</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+
+<span class="p">[</span><span class="n">Tango</span> <span class="nl">initializeWithTango</span><span class="p">:</span><span class="s">@&quot;your-tango-sdk-key&quot;</span><span class="p">];</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>To find your Tango API KEY <a href="https://app.tangotargeting.com/">Go to Console <i class="fa fa-external-link"></i></a> and locate the card <strong>Tango SDK Key</strong>
@@ -940,8 +1066,26 @@
 then hover it and click the copy icon on the right.
 <img alt="Tango SDK Key" src="../../../images/content/locate-api-key-copy.png" /></p>
 </div>
-<p>After that you should implement the following delegate methods.
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="n">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+<p>After that you should implement the following delegate methods.</p>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-3-swift" aria-controls="tab-3-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-3-objc" aria-controls="tab-3-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-3-swift">
+            <div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="n">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Tango</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span><span class="p">:</span> <span class="n">userInfo</span><span class="p">)</span>
 <span class="p">}</span>
 
@@ -964,9 +1108,68 @@ then hover it and click the copy icon on the right.
 <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">notification</span><span class="p">:</span> <span class="bp">UILocalNotification</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Tango</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">application</span><span class="p">,</span> <span class="n">didReceive</span><span class="p">:</span> <span class="n">notification</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div></p>
-<p>For <strong>iOS 10</strong> you should also add: 
-<div class="codehilite"><pre><span></span><span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> UNUserNotificationCenterDelegate Methods</span>
+</pre></div>
+
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-3-objc">
+            <div class="codehilite"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didReceiveRemoteNotification:</span><span class="p">(</span><span class="n">nonnull</span> <span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">userInfo</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didReceiveRemoteNotification</span><span class="p">:</span><span class="n">userInfo</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didRegisterForRemoteNotificationsWithDeviceToken:</span><span class="p">(</span><span class="n">nonnull</span> <span class="bp">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceToken</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didRegisterForRemoteNotificationsWithDeviceToken</span><span class="p">:</span><span class="n">deviceToken</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFailToRegisterForRemoteNotificationsWithError:</span><span class="p">(</span><span class="n">nonnull</span> <span class="bp">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didFailToRegisterForRemoteNotificationsWithError</span><span class="p">:</span><span class="n">error</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didReceiveRemoteNotification:</span><span class="p">(</span><span class="n">nonnull</span> <span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">userInfo</span> <span class="nf">fetchCompletionHandler:</span><span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UIBackgroundFetchResult</span><span class="p">))</span><span class="nv">completionHandler</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didReceiveRemoteNotification</span><span class="p">:</span><span class="n">userInfo</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didRegisterUserNotificationSettings:</span><span class="p">(</span><span class="n">nonnull</span> <span class="bp">UIUserNotificationSettings</span> <span class="o">*</span><span class="p">)</span><span class="nv">notificationSettings</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didRegister</span><span class="p">:</span><span class="n">notificationSettings</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didReceiveLocalNotification:</span><span class="p">(</span><span class="bp">UILocalNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">notification</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">didReceive</span><span class="p">:</span><span class="n">notification</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
+<p>For <strong>iOS 10</strong> you should also add:</p>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-4-swift" aria-controls="tab-4-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-4-objc" aria-controls="tab-4-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-4-swift">
+            <div class="codehilite"><pre><span></span><span class="c1">// </span><span class="cs">MARK:</span><span class="c1"> UNUserNotificationCenterDelegate Methods</span>
 
 <span class="p">@</span><span class="n">available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
@@ -977,26 +1180,144 @@ then hover it and click the copy icon on the right.
 <span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> <span class="n">willPresent</span> <span class="n">notification</span><span class="p">:</span> <span class="n">UNNotification</span><span class="p">,</span> <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Tango</span><span class="p">.</span><span class="n">userNotificationCenter</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">willPresent</span><span class="p">:</span> <span class="n">notification</span><span class="p">,</span> <span class="n">withCompletionHandler</span><span class="p">:</span> <span class="n">completionHandler</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-4-objc">
+            <div class="codehilite"><pre><span></span><span class="c1">// MARK: UNUserNotificationCenterDelegate Methods</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">userNotificationCenter:</span><span class="p">(</span><span class="n">UNUserNotificationCenter</span> <span class="o">*</span><span class="p">)</span><span class="nv">center</span> <span class="nf">willPresentNotification:</span><span class="p">(</span><span class="n">UNNotification</span> <span class="o">*</span><span class="p">)</span><span class="nv">notification</span> <span class="nf">withCompletionHandler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UNNotificationPresentationOptions</span> <span class="n">options</span><span class="p">))</span><span class="nv">completionHandler</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">userNotificationCenter</span><span class="p">:</span><span class="n">center</span> <span class="nl">willPresent</span><span class="p">:</span><span class="n">notification</span> <span class="nl">withCompletionHandler</span><span class="p">:</span><span class="n">completionHandler</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">userNotificationCenter:</span><span class="p">(</span><span class="n">UNUserNotificationCenter</span> <span class="o">*</span><span class="p">)</span><span class="nv">center</span> <span class="nf">didReceiveNotificationResponse:</span><span class="p">(</span><span class="n">UNNotificationResponse</span> <span class="o">*</span><span class="p">)</span><span class="nv">response</span> <span class="nf">withCompletionHandler:</span><span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">completionHandler</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="n">Tango</span> <span class="nl">userNotificationCenter</span><span class="p">:</span><span class="n">center</span> <span class="nl">didReceive</span><span class="p">:</span><span class="n">response</span> <span class="nl">withCompletionHandler</span><span class="p">:</span><span class="n">completionHandler</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <p><strong><em>Important:</em></strong> If you are going to use a location campaign you need to add in your <code>plist</code> the following key: <code>NSLocationAlwaysUsageDescription</code>.</p>
 <h3 id="tangorichnotification-framework">TangoRichNotification framework<a class="headerlink" href="#tangorichnotification-framework" title="Permanent link">&para;</a></h3>
 <p>Open the <code>NotificationService</code> class you have created following the <a href="https://github.com/tangotargeting/tango-documentation/wiki/Installation---iOS">Installation Guide</a> and add the following import:</p>
-<div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">TangoRichNotification</span>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-5-swift" aria-controls="tab-5-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-5-objc" aria-controls="tab-5-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-5-swift">
+            <div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">TangoRichNotification</span>
 </pre></div>
 
-<p>Then, in the <code>didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)</code> method replace the following code:
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-5-objc">
+            <div class="codehilite"><pre><span></span><span class="cp">#import &lt;UserNotifications/UserNotifications.h&gt;</span>
+<span class="cp">#import &lt;TangoRichNotification/TangoRichNotification-Swift.h&gt;</span>
+<span class="cp">#import &lt;TangoRichNotification/TangoRichNotification.h&gt;</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
+<p>Then, in the <code>didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)</code> method replace the following code:</p>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-6-swift" aria-controls="tab-6-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-6-objc" aria-controls="tab-6-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-6-swift">
+            <div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
     <span class="c1">// Modify the notification content here...</span>
     <span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="s">&quot;</span><span class="si">\(</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span><span class="si">)</span><span class="s"> [modified]&quot;</span>
     <span class="n">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
 <span class="p">}</span>
-</pre></div></p>
+</pre></div>
+
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-6-objc">
+            <div class="codehilite"><pre><span></span><span class="c1">//Modify the notification content here...</span>
+<span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ [modified]&quot;</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span><span class="p">];</span>
+<span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">);</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <p>with:</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-7-swift" aria-controls="tab-7-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-7-objc" aria-controls="tab-7-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-7-swift">
+            <div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
     <span class="n">TangoRichNotification</span><span class="p">.</span><span class="n">setupRichContent</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="n">bestAttemptContent</span><span class="p">,</span>  <span class="n">apiKey</span><span class="p">:</span> <span class="s">&quot;your-tango-sdk-key&quot;</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="k">in</span> <span class="n">contentHandler</span><span class="p">(</span><span class="n">content</span><span class="p">)})</span>
 <span class="p">}</span>
 </pre></div>
 
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-7-objc">
+            <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">TangoRichNotification</span> <span class="nl">setupRichContentWithContent</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span> <span class="nl">apiKey</span><span class="p">:</span><span class="s">@&quot;your-tango-sdk-key&quot;</span> <span class="nl">completionHandler</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">];</span>
+</pre></div>
+
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
 <p>At this point you should be ready to go. To test if the installation succeeded you should enter the Tango Targeting account then create and activate some campaigns. The easiest way is to create a real-time campaign but it pays off to test all campaigns as some of them have specific needs(like location permissions).</p>
 <p>If a campaign doesn't trigger it is possible it did not reach the device yet as the synchronization is triggered approximately every ten minutes. To go around this, you could simply restart the application and a synchronization will immediately trigger. Note that real-time campaigns don't need any synchronization to work.</p>
@@ -1077,10 +1398,12 @@ then hover it and click the copy icon on the right.
       
     </div>
     
-      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/tab.js"></script>
       
     
     

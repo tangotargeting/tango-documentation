@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../../images/favicon.ico">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -38,6 +53,8 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    
+      <link rel="stylesheet" href="../../../css/tab.css">
     
     
   </head>
@@ -104,8 +121,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -122,6 +139,7 @@
 </header>
     
     <div class="md-container">
+      
       
       
         
@@ -222,13 +240,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../../images/tango-blue.svg">
         
       
-    </div>
+    </span>
     Tango Targeting Docs
   </label>
   
@@ -667,6 +685,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -851,6 +881,12 @@
                 
                 <p>Tags are a useful way to target specific users. Every device that has an associated tag (segment) will receive campaigns that are also associated with that tag.</p>
 <p>To add new segments to an iOS device use the following line:</p>
+<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">yourCustomMethod</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Tango</span><span class="p">.</span><span class="n">registerSegments</span><span class="p">(</span><span class="n">segments</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;firstSegment&quot;</span><span class="p">,</span> <span class="s">&quot;secondSegment&quot;</span><span class="p">])</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Segments can be associated with the device externally as well. Those tags will not be accessible on the device.</p>
@@ -888,13 +924,13 @@
           </a>
         
         
-          <a href="../../cordova/overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../troubleshooting/" title="Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Troubleshooting
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -932,10 +968,12 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/tab.js"></script>
       
     
     

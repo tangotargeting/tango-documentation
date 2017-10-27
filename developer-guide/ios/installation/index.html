@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../../images/favicon.ico">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -38,6 +53,8 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    
+      <link rel="stylesheet" href="../../../css/tab.css">
     
     
   </head>
@@ -104,8 +121,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -122,6 +139,7 @@
 </header>
     
     <div class="md-container">
+      
       
       
         
@@ -222,13 +240,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../../images/tango-blue.svg">
         
       
-    </div>
+    </span>
     Tango Targeting Docs
   </label>
   
@@ -636,13 +654,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manual-installation" title="Manual installation" class="md-nav__link">
-    Manual installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install-with-cocoapods" title="Install with CocoaPods" class="md-nav__link">
     Install with CocoaPods
   </a>
@@ -673,13 +684,6 @@
         <li class="md-nav__item">
   <a href="#add-certificate-to-tango" title="Add Certificate to Tango" class="md-nav__link">
     Add Certificate to Tango
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#strip-framework-before-app-store-submission" title="Strip Framework before App Store submission" class="md-nav__link">
-    Strip Framework before App Store submission
   </a>
   
 </li>
@@ -737,6 +741,18 @@
   <li class="md-nav__item">
     <a href="../manage-tags/" title="Manage tags" class="md-nav__link">
       Manage tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -921,13 +937,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manual-installation" title="Manual installation" class="md-nav__link">
-    Manual installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install-with-cocoapods" title="Install with CocoaPods" class="md-nav__link">
     Install with CocoaPods
   </a>
@@ -962,13 +971,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#strip-framework-before-app-store-submission" title="Strip Framework before App Store submission" class="md-nav__link">
-    Strip Framework before App Store submission
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -993,56 +995,52 @@
 <li>Xcode 8.1+</li>
 <li>Swift 3.2+</li>
 </ul>
-<h3 id="manual-installation">Manual installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Download latest version of <a href="https://github.com/tangotargeting/tango-ios/tree/master/Tango.framework">Tango.framework</a>.</li>
-<li>Drag Tango.framework file into the root project group.</li>
-<li>Add Tango.framework to Embedded binaries. Go to your_projectTarget -&gt; General and hit + button from Embedded Binaries to add Tango framework.</li>
-<li>Create an iOS 10 NotificationServiceExtension using <a href="https://github.com/tangotargeting/tango-ios#ios-10-rich-notifications">iOS 10 Rich Notifications guide</a>.</li>
-<li>Download <a href="https://github.com/tangotargeting/TangoRichNotifications/tree/master/TangoRichNotification.framework">TangoRichNotification.framework</a></li>
-<li>Drag TangoRichNotification.framework into your notification extension group and add it also to Embedded binaries of your project.</li>
-<li>Strip the framework before App Store submission, read <a href="#strip-framework-before-app-store-submission">this</a> guide for more details.</li>
-</ol>
 <h3 id="install-with-cocoapods">Install with CocoaPods<a class="headerlink" href="#install-with-cocoapods" title="Permanent link">&para;</a></h3>
 <p>CocoaPods is a dependency manager, which automates and simplifies the process of using 3<sup>rd</sup>-party libraries in your projects. See the <a href="https://guides.cocoapods.org/using/getting-started.html">Getting Started</a> guide for more information. You can install it with the following terminal command:</p>
 <div class="codehilite"><pre><span></span>$ gem install cocoapods
 </pre></div>
 
+
 <p>After installing go to your project directory and type this commad:</p>
 <div class="codehilite"><pre><span></span>$ pod init
 </pre></div>
 
+
 <p>In project folder it will appear a file called Podfile. Open it and integrate Tango by typing:</p>
 <div class="codehilite"><pre><span></span>target &#39;TargetName&#39; do
-use_frameworks!
-pod &#39;Tango&#39;, &#39;~&gt; 1.0.11&#39;
+  use_frameworks!
+  pod &#39;Tango&#39;, &#39;~&gt; 1.0.14&#39;
 end
 </pre></div>
+
 
 <p>After filling the Podfile save it and run the following command in the Terminal:</p>
 <div class="codehilite"><pre><span></span>$ pod install
 </pre></div>
 
+
 <p>Close your project, go to your project location on disk and open the workspace the newly created <code>.xcworkspace</code> file inside your project directory. Now the framework can be used and for that please follow "How to use" guide.</p>
 <h3 id="ios-10-rich-notifications">iOS 10 Rich Notifications<a class="headerlink" href="#ios-10-rich-notifications" title="Permanent link">&para;</a></h3>
-<p>The library has support for iOS 10 notifications attachments. You can add images and GIF files in a notification. For using this functionality you will need to create a  <a href="https://developer.apple.com/reference/usernotifications/unnotificationserviceextension/">notification service extension</a>. </p>
+<p>The library has support for iOS 10 notifications attachments. You can add images and GIF files in a notification. For using this functionality you will need to create a  <a href="https://developer.apple.com/reference/usernotifications/unnotificationserviceextension/">notification service extension</a>.</p>
 <p>Create a new iOS target in Xcode (File -&gt; New -&gt; Target) and select the Notification Service Extension type</p>
 <p><img alt="NotificationServiceExtension image" src="../../../images/content/ios-notification-service-extension.png" /></p>
-<p>****For CocoaPods only****</p>
-<p>Add a new target for notification extension in your podfile. Add TangoRichNotification framework, by adding the following lines to your podspec:
+<p>Add a new target for notification extension in your podfile. Add TangoRichNotification framework, by adding the following lines to your podspec:</p>
 <div class="codehilite"><pre><span></span>target &#39;NotificationServiceExtesion-Target-Name&#39; do
-use_frameworks!
-pod &#39;TangoRichNotification&#39;, &#39;~&gt; 1.0.11&#39;
+  use_frameworks!
+  pod &#39;TangoRichNotification&#39;, &#39;~&gt; 1.0.15&#39;
 end
 </pre></div>
-After filling Podfile save it and run the following command in a Terminal window:</p>
+
+
+<p>After filling Podfile save it and run the following command in a Terminal window:</p>
 <div class="codehilite"><pre><span></span>$ pod install
 </pre></div>
 
+
 <h3 id="add-capabilities">Add capabilities<a class="headerlink" href="#add-capabilities" title="Permanent link">&para;</a></h3>
-<p>For using push notifications you should enable some more capabilities. Go to Xcode select the target’s Capabilities pane and enable push notifications: </p>
+<p>For using push notifications you should enable some more capabilities. Go to Xcode select the target&rsquo;s Capabilities pane and enable push notifications:</p>
 <p><img alt="PushNotificatioCapabilities image" src="../../../images/content/ios-enable-push-notifications.png" /></p>
-<p>You should also enable Background Modes an Remote notifications capabilities: </p>
+<p>You should also enable Background Modes an Remote notifications capabilities:</p>
 <p><img alt="BackgroundModes image" src="../../../images/content/ios-enable-background-modes.png" /></p>
 <h3 id="apns-setup">APNS Setup<a class="headerlink" href="#apns-setup" title="Permanent link">&para;</a></h3>
 <p>After you setup the framework in order to use push notification you should create an APNS Certificate which requires membership in the <a href="https://developer.apple.com/programs/">iOS Developer Program</a>.</p>
@@ -1054,7 +1052,7 @@ After filling Podfile save it and run the following command in a Terminal window
 <li>Click edit button, go to Push Notifications section and press the button <strong>Create Certificate...</strong> for distribution or development.<img alt="CreateCertificate image" src="../../../images/content/ios-create-certificate.png" /> Follow the instructions to create a Certificate Signing Request (CSR) file from your Mac. When you're done, press <strong>Continue</strong>.</li>
 <li>Upload the CSR and after that press download to get the Certificate.</li>
 <li>Open the certificate. Opening the certificate will open Keychain Access.</li>
-<li>Select your certificate from  Keychain Access in My Certificates section. If the certificate is not here try in Certificate section. Right click on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle". 
+<li>Select your certificate from  Keychain Access in My Certificates section. If the certificate is not here try in Certificate section. Right click on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle".
 This command will export the certificate in a .p12 file with a password.</li>
 </ol>
 <h3 id="add-certificate-to-tango">Add Certificate to Tango<a class="headerlink" href="#add-certificate-to-tango" title="Permanent link">&para;</a></h3>
@@ -1065,10 +1063,7 @@ This command will export the certificate in a .p12 file with a password.</li>
 - insert app name
 - drag and drop  .p12 file from previous step</p>
 <p><img alt="AddCertificate image" src="../../../images/content/ios-add-certificate.png" /></p>
-<h2 id="strip-framework-before-app-store-submission">Strip Framework before App Store submission<a class="headerlink" href="#strip-framework-before-app-store-submission" title="Permanent link">&para;</a></h2>
-<p>This is an universal framework, so due to <a href="http://www.openradar.me/radar?id=6409498411401216">App Store submission bug</a> we need to strip framework for unused architectures, for that go to BuilPhases add a new “Run Script Phase” in your app’s target and paste the following snippet in the script text field:</p>
-<div class="codehilite"><pre><span></span>bash &quot;${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tango.framework/Scripts/strip-simulator-arch.sh&quot;
-</pre></div>
+<p>Please continue reading the <a href="../../../developer-guide/ios/prepare-and-initialize/">Prepare and initialize</a> chapter, in order to finish integrating Tango SDK into your app.</p>
                 
                   
                 
@@ -1146,10 +1141,12 @@ This command will export the certificate in a .p12 file with a password.</li>
       
     </div>
     
-      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/tab.js"></script>
       
     
     

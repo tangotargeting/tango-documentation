@@ -10,9 +10,24 @@
       
       
       
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
         <link rel="shortcut icon" href="../../../images/favicon.ico">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.2">
     
     
       
@@ -23,7 +38,7 @@
       <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-04ea671600.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
       
@@ -38,6 +53,8 @@
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    
+      <link rel="stylesheet" href="../../../css/tab.css">
     
     
   </head>
@@ -104,8 +121,8 @@
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -122,6 +139,7 @@
 </header>
     
     <div class="md-container">
+      
       
       
         
@@ -222,13 +240,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <div class="md-nav__button md-logo">
+    <span class="md-nav__button md-logo">
       
         
           <img src="../../../images/tango-blue.svg">
         
       
-    </div>
+    </span>
     Tango Targeting Docs
   </label>
   
@@ -658,6 +676,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ios/troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -748,70 +778,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ios-10-rich-notifications" title="iOS 10 Rich Notifications" class="md-nav__link">
-    iOS 10 Rich Notifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tangorichnotification-framework" title="TangoRichNotification framework" class="md-nav__link">
-    TangoRichNotification framework
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import-tangorichnotification" title="Import TangoRichNotification" class="md-nav__link">
-    Import TangoRichNotification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#change-didreceive-method" title="Change didReceive method" class="md-nav__link">
-    Change didReceive method
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-and-run" title="Build and run" class="md-nav__link">
-    Build and run
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-notifications-capabilities" title="Push Notifications Capabilities" class="md-nav__link">
-    Push Notifications Capabilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apns-setup" title="APNS Setup" class="md-nav__link">
-    APNS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-certificate-to-tango" title="Add Certificate to Tango" class="md-nav__link">
-    Add Certificate to Tango
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#location-campaigns" title="Location campaigns" class="md-nav__link">
-    Location campaigns
+  <a href="#integrate-tango-sdk" title="Integrate Tango SDK" class="md-nav__link">
+    Integrate Tango SDK
   </a>
   
 </li>
@@ -947,70 +915,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ios-10-rich-notifications" title="iOS 10 Rich Notifications" class="md-nav__link">
-    iOS 10 Rich Notifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tangorichnotification-framework" title="TangoRichNotification framework" class="md-nav__link">
-    TangoRichNotification framework
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import-tangorichnotification" title="Import TangoRichNotification" class="md-nav__link">
-    Import TangoRichNotification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#change-didreceive-method" title="Change didReceive method" class="md-nav__link">
-    Change didReceive method
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-and-run" title="Build and run" class="md-nav__link">
-    Build and run
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-notifications-capabilities" title="Push Notifications Capabilities" class="md-nav__link">
-    Push Notifications Capabilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apns-setup" title="APNS Setup" class="md-nav__link">
-    APNS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-certificate-to-tango" title="Add Certificate to Tango" class="md-nav__link">
-    Add Certificate to Tango
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#location-campaigns" title="Location campaigns" class="md-nav__link">
-    Location campaigns
+  <a href="#integrate-tango-sdk" title="Integrate Tango SDK" class="md-nav__link">
+    Integrate Tango SDK
   </a>
   
 </li>
@@ -1033,81 +939,21 @@
                 <h1 id="cordova-ios-installation">Cordova iOS installation<a class="headerlink" href="#cordova-ios-installation" title="Permanent link">&para;</a></h1>
 <h3 id="prepare-platform">Prepare platform<a class="headerlink" href="#prepare-platform" title="Permanent link">&para;</a></h3>
 <ol>
-<li>If you don't have the iOS platform in your project, use the following line to add it:
+<li>If you don't have the iOS platform in your project, use the following line to add it:</li>
+</ol>
 <div class="codehilite"><pre><span></span>cordova platform add ios
-</pre></div></li>
+</pre></div>
+
+
+<ol>
 <li>Navigate to <code>yourCordovaProject/platforms/ios</code> and open the <code>.xcworkspace</code> file with Xcode.</li>
-<li>Select <strong>yourCordovaProject</strong> from Xcode Project Navigator. Then, select <em>Build Settings</em>, 
+<li>Select <strong>yourCordovaProject</strong> from Xcode Project Navigator. Then, select <em>Build Settings</em>,
     search for <strong>Always Embed Swift Standard Libraries</strong> and set it to <strong>YES</strong>.</li>
 <li>You also need to code sign your app, for that please follow <a href="https://developer.apple.com/support/code-signing/">this guide</a>.</li>
 <li>Build and run.</li>
 </ol>
-<h3 id="ios-10-rich-notifications">iOS 10 Rich Notifications<a class="headerlink" href="#ios-10-rich-notifications" title="Permanent link">&para;</a></h3>
-<p>Tango Targeting SDK has support for iOS 10 notifications attachments which enables you to add images and animated GIFs in a notification. For using this functionality you will need to create a <a href="https://developer.apple.com/reference/usernotifications/unnotificationserviceextension/">notification service extension</a>. </p>
-<p>Create a new iOS target in <em>Xcode (File -&gt; New -&gt; Target)</em> and select the <code>Notification Service Extension</code> type
-<img alt="NotificationServiceExtension image" src="../../../images/content/ios-notification-service-extension.png" /></p>
-<p>Go to <code>&quot;yourCordovaProject&quot;/platforms/ios</code> and open <code>Podfile</code>, then add the <code>TangoRichNotification</code> framework to this target, by typing following lines:
-<div class="codehilite"><pre><span></span>target &#39;Your-NotificationServiceExtesion-Target-Name&#39; do
-    use_frameworks!
-    pod &#39;TangoRichNotification&#39;, &#39;~&gt; 1.0.11&#39;
-end
-</pre></div></p>
-<p>TangoRichNotification is developed for iOS 10.0 or higher, this means you should also update the <code>platform :ios, '9.0'</code> to <code>10.0</code>.
-After changing and saving the Podfile  run the following command in the Terminal:</p>
-<div class="codehilite"><pre><span></span>$ pod install
-</pre></div>
-
-<p>iOS 10 Notification Framework installed.</p>
-<h3 id="tangorichnotification-framework">TangoRichNotification framework<a class="headerlink" href="#tangorichnotification-framework" title="Permanent link">&para;</a></h3>
-<p>A few changes need to be made to <code>NotificationsService.swift</code> file.</p>
-<h4 id="import-tangorichnotification">Import <code>TangoRichNotification</code><a class="headerlink" href="#import-tangorichnotification" title="Permanent link">&para;</a></h4>
-<p>After creating the Notification service extension, go to <code>NotificationService.swift</code> and add the following import:</p>
-<div class="codehilite"><pre><span></span><span class="n">import</span> <span class="n">TangoRichNotification</span>
-</pre></div>
-
-<h4 id="change-didreceive-method">Change <code>didReceive</code> method<a class="headerlink" href="#change-didreceive-method" title="Permanent link">&para;</a></h4>
-<p>In <code>didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)</code> method replace:
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">let</span> <span class="n">bestAttemptContent</span> <span class="o">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
-    <span class="c1">// Modify the notification content here...</span>
-    <span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">&quot;\(bestAttemptContent.title) [modified]&quot;</span>
-    <span class="n">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div></p>
-<p>with:</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">let</span> <span class="n">bestAttemptContent</span> <span class="o">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
-    <span class="n">TangoRichNotification</span><span class="p">.</span><span class="n">setupRichContent</span><span class="p">(</span><span class="nl">content</span><span class="p">:</span> <span class="n">bestAttemptContent</span><span class="p">,</span>  <span class="nl">apiKey</span><span class="p">:</span> <span class="s">&quot;your-api-key&quot;</span><span class="p">,</span> <span class="nl">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="k">in</span> <span class="n">contentHandler</span><span class="p">(</span><span class="n">content</span><span class="p">)})</span>
-<span class="p">}</span>
-</pre></div>
-
-<h4 id="build-and-run">Build and run<a class="headerlink" href="#build-and-run" title="Permanent link">&para;</a></h4>
-<h3 id="push-notifications-capabilities">Push Notifications Capabilities<a class="headerlink" href="#push-notifications-capabilities" title="Permanent link">&para;</a></h3>
-<p>In Xcode click on your project root. Then under <em>Targets</em> select your project then choose the <em>Capabilities</em> pane. Now enable <strong>Push Notifications</strong>: </p>
-<p><img alt="PushNotificatioCapabilities image" src="../../../images/content/ios-enable-push-notifications.png" /></p>
-<p>Enable <strong>Background Modes</strong>, then check <strong>Remote notifications</strong> as presented in the image below.</p>
-<p><img alt="BackgroundModes image" src="../../../images/content/ios-enable-background-modes.png" /></p>
-<h3 id="apns-setup">APNS Setup<a class="headerlink" href="#apns-setup" title="Permanent link">&para;</a></h3>
-<p>After you setup the framework in order to use push notification you should create an APNS Certificate which require membership in the <a href="https://developer.apple.com/programs/">iOS Developer Program</a>.</p>
-<p>Go to <a href="https://developer.apple.com/account/ios/certificate/">Apple Developer Members Center</a> click on App IDs from Identifiers section.</p>
-<p><img alt="AppIds image" src="../../../images/content/ios-app-ids.png" /></p>
-<ol>
-<li>Select your app id. If you don't have an app id created select +  button and fill out the form, be sure you check Push Notification checkbox.</li>
-<li>Expand your app by selecting your app id and you will see a field named Push Notifications with yellow or green status icons for development or distribution: <img alt="PushNotificationStatus image" src="../../../images/content/ios-push-notifications-status.png" /></li>
-<li>Click edit button, go to Push Notifications section and press the button create certificate for distribution or development.<img alt="CreateCertificate image" src="../../../images/content/ios-create-certificate.png" /> Follow up the instructions to create an Certificate Signing Request (CSR) file from your Mac. And press continue.</li>
-<li>Upload the CSR and after that press download to get the Certificate.</li>
-<li>Open the certificate. Opening the certificate will open Keychain Access.</li>
-<li>Select your certificate from  Keychain Access in My Certificates section. If the certificate is not here try in Certificate section. Right clik on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle". 
-This command will export the certificate in a .p12 file with a password.</li>
-</ol>
-<h3 id="add-certificate-to-tango">Add Certificate to Tango<a class="headerlink" href="#add-certificate-to-tango" title="Permanent link">&para;</a></h3>
-<p>After generating the Push Notification certificate go <a href="https://app.tangotargeting.com/app">here</a> and create a new iOS app:</p>
-<p><img alt="CreateiOSApp image" src="../../../images/content/ios-create-ios-app.png" /></p>
-<p>After that you should fill the form with your app data:
-- insert app bundle id
-- insert app name
-- drag and drop  .p12 file from previous step</p>
-<p><img alt="AddCertificate image" src="../../../images/content/ios-add-certificate.png" /></p>
-<h2 id="location-campaigns">Location campaigns<a class="headerlink" href="#location-campaigns" title="Permanent link">&para;</a></h2>
-<p>If you are going to use a location campaign you need to add in your plist the following key <code>NSLocationAlwaysUsageDescription</code>.</p>
+<h3 id="integrate-tango-sdk">Integrate Tango SDK<a class="headerlink" href="#integrate-tango-sdk" title="Permanent link">&para;</a></h3>
+<p>Please follow the <a href="../../../developer-guide/ios/installation/#ios-10-rich-notifications">iOS project installation guide</a> in order to complete your Tango iOS SDK integration.</p>
                 
                   
                 
@@ -1185,10 +1031,12 @@ This command will export the certificate in a .p12 file with a password.</li>
       
     </div>
     
-      <script src="../../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      <script src="../../../assets/javascripts/application-946997f430.js"></script>
       
       
-      <script>app.initialize({url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"0.16.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/tab.js"></script>
       
     
     
