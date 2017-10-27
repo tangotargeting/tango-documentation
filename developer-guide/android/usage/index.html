@@ -31,7 +31,7 @@
     
     
       
-        <title>Handle custom actions - Tango Targeting Docs</title>
+        <title>Monitor Applications Usage (Advanced) - Tango Targeting Docs</title>
       
     
     
@@ -103,7 +103,7 @@
                 </span>
               
             
-            Handle custom actions
+            Monitor Applications Usage (Advanced)
           
         </span>
       </div>
@@ -562,18 +562,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="Handle custom actions" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../handle-custom-actions/" title="Handle custom actions" class="md-nav__link">
       Handle custom actions
     </a>
-    
   </li>
 
         
@@ -605,11 +598,64 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../usage/" title="Monitor Applications Usage (Advanced)" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Monitor Applications Usage (Advanced)
+      </label>
+    
+    <a href="./" title="Monitor Applications Usage (Advanced)" class="md-nav__link md-nav__link--active">
       Monitor Applications Usage (Advanced)
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-the-usage-of-the-applications" title="Monitor the usage of the applications" class="md-nav__link">
+    Monitor the usage of the applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-gradle-dependency" title="Add the Gradle dependency" class="md-nav__link">
+    Add the Gradle dependency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-special-permissions" title="Requesting special permissions" class="md-nav__link">
+    Requesting special permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-ready-to-go" title="You are ready to go!" class="md-nav__link">
+    You are ready to go!
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -878,6 +924,41 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monitor-the-usage-of-the-applications" title="Monitor the usage of the applications" class="md-nav__link">
+    Monitor the usage of the applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-the-gradle-dependency" title="Add the Gradle dependency" class="md-nav__link">
+    Add the Gradle dependency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requesting-special-permissions" title="Requesting special permissions" class="md-nav__link">
+    Requesting special permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-are-ready-to-go" title="You are ready to go!" class="md-nav__link">
+    You are ready to go!
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -889,33 +970,44 @@
               
                 
                 
-                  <h1>Handle custom actions</h1>
+                  <h1>Monitor Applications Usage (Advanced)</h1>
                 
-                <p>To handle custom <a href="../../../user-guide/engagement/what-is-a-campaign/#actions">actions</a> on Android you have to create a BroadcastReceiver that will intercept the actions:</p>
-<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomActionReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">KEY_CTA</span> <span class="o">=</span> <span class="s">&quot;com.tangotargeting.intent.extra.CTA&quot;</span><span class="o">;</span>
-
-  <span class="nd">@Override</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">String</span> <span class="n">action</span> <span class="o">=</span> <span class="n">intent</span><span class="o">.</span><span class="na">getStringExtra</span><span class="o">(</span><span class="n">KEY_CTA</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">action</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-      <span class="c1">// Check what action was received and handle it</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
+                <h3 id="monitor-the-usage-of-the-applications">Monitor the usage of the applications<a class="headerlink" href="#monitor-the-usage-of-the-applications" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Tango Usage monitoring requires Android Lollipop 5.1 and a special permission needs to be requested.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We strongly advice not to use this module, unless it is required by the business or app functionalities. </p>
+</div>
+<p>Tango will monitor all user activity and applications on the device. Each application event (Application moved to foreground, Application moved to background, installed applications) will be monitored and reported with the associated data.</p>
+<h3 id="add-the-gradle-dependency">Add the Gradle dependency<a class="headerlink" href="#add-the-gradle-dependency" title="Permanent link">&para;</a></h3>
+<p>In your app's <code>build.gradle</code> file add the following dependency.</p>
+<div class="codehilite"><pre><span></span><span class="n">compile</span> <span class="o">(</span><span class="s1">&#39;com.tangotargeting:tango-usage:2.2.2&#39;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">transitive</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
 
 
-<p>then declare it in the <code>AndroidManifest.xml</code> file:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;application&gt;</span>
-    ...
-    <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&quot;.CustomActionReceiver&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;intent-filter&gt;</span>
-            <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.tangotargeting.intent.action.CUSTOM_CTA&quot;</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;/intent-filter&gt;</span>
-    <span class="nt">&lt;/receiver&gt;</span>
-    ...
-<span class="nt">&lt;/application&gt;</span>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Previous Tango installation steps are required. </p>
+</div>
+<h3 id="requesting-special-permissions">Requesting special permissions<a class="headerlink" href="#requesting-special-permissions" title="Permanent link">&para;</a></h3>
+<p>Tango provides helper methods for managing special permissions. </p>
+<p>Check for usage permission:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">UsagePermissionUtil</span><span class="o">.</span><span class="na">usageStatsPermissionGranted</span><span class="o">(</span><span class="n">context</span><span class="o">);</span> <span class="c1">//returns boolean</span>
 </pre></div>
+
+
+<p>Add the following code for requesting usage permission:</p>
+<div class="codehilite"><pre><span></span>    <span class="n">UsagePermissionUtil</span><span class="o">.</span><span class="na">openGrantUsageStatsPermission</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+</pre></div>
+
+
+<h2 id="you-are-ready-to-go">You are ready to go!<a class="headerlink" href="#you-are-ready-to-go" title="Permanent link">&para;</a></h2>
+<p>At this point Tango will monitor and report applications usage stats.</p>
                 
                   
                 
@@ -934,7 +1026,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../manage-tags/" title="Manage tags" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -943,19 +1035,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installation
+                Manage tags
               </span>
             </div>
           </a>
         
         
-          <a href="../trigger-automated-campaigns/" title="Trigger automated campaigns" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../ios/installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Trigger automated campaigns
+                Installation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
