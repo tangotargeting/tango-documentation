@@ -881,12 +881,39 @@
                 
                 <p>Tags are a useful way to target specific users. Every device that has an associated tag (segment) will receive campaigns that are also associated with that tag.</p>
 <p>To add new segments to an iOS device use the following line:</p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">yourCustomMethod</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">Tango</span><span class="p">.</span><span class="n">registerSegments</span><span class="p">(</span><span class="n">segments</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;firstSegment&quot;</span><span class="p">,</span> <span class="s">&quot;secondSegment&quot;</span><span class="p">])</span>
-<span class="p">}</span>
+<p>
+                <div class="code-nav-container">
+                    
+        <ul class="nav nav-tabs">
+            
+        <li class="nav-item active">
+            <a href="#tab-0-swift" aria-controls="tab-0-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+        </li>
+    
+        <li class="nav-item ">
+            <a href="#tab-0-objc" aria-controls="tab-0-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+        </li>
+    
+        </ul>
+    
+        <div class="tab-content">
+            
+        <div role="tabpanel" class="tab-pane active" id="tab-0-swift">
+            <div class="codehilite"><pre><span></span>  <span class="n">Tango</span><span class="p">.</span><span class="n">registerSegments</span><span class="p">(</span><span class="n">segments</span><span class="p">:</span> <span class="p">[</span><span class="s">&quot;firstSegment&quot;</span><span class="p">,</span> <span class="s">&quot;secondSegment&quot;</span><span class="p">])</span>
 </pre></div>
 
+        </div>
+    
+        <div role="tabpanel" class="tab-pane " id="tab-0-objc">
+            <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">Tango</span> <span class="nl">registerSegmentsWithSegments</span><span class="p">:</span> <span class="l">@[</span><span class="s">@&quot;first-segment&quot;</span><span class="p">,</span> <span class="s">@&quot;second-segment&quot;</span><span class="l">]</span><span class="p">];</span>
+</pre></div>
 
+        </div>
+    
+        </div>
+    
+                </div>
+                    </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Segments can be associated with the device externally as well. Those tags will not be accessible on the device.</p>
