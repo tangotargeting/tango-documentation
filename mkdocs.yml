@@ -67,6 +67,7 @@ pages:
       - Handle custom actions: developer-guide/android/handle-custom-actions.md
       - Trigger automated campaigns: developer-guide/android/trigger-automated-campaigns.md
       - Manage tags: developer-guide/android/manage-tags.md
+      - Monitor Applications Usage (Advanced): developer-guide/android/usage.md
     - iOS:
       - Installation: developer-guide/ios/installation.md
       - Prepare and initialize: developer-guide/ios/prepare-and-initialize.md
