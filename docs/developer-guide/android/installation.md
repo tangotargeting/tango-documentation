@@ -108,7 +108,7 @@ Then go to Tango Console and add them to your app.
 
 Hit the **Update** button.
 
-### Add permissions
+### Required permissions
 
 Tango SDK relies on the following permissions:
 
