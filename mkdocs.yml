@@ -12,6 +12,11 @@ extra:
     - type: 'github'
       link: 'https://github.com/tangotargeting'
 
+extra_css:
+    - css/tab.css
+extra_javascript:
+    - js/tab.js
+
 # Extensions
 markdown_extensions:
   - markdown.extensions.admonition
@@ -35,6 +40,8 @@ markdown_extensions:
   - pymdownx.tasklist(custom_checkbox=true)
   - pymdownx.tilde
   - fontawesome_markdown
+  - markdown_fenced_code_tabs:
+      single_block_as_tab: False
 
 # Page tree
 pages:
@@ -66,6 +73,7 @@ pages:
       - Handle custom actions: developer-guide/ios/handle-custom-actions.md
       - Trigger automated campaigns: developer-guide/ios/trigger-automated-campaigns.md
       - Manage tags: developer-guide/ios/manage-tags.md
+      - Troubleshooting: developer-guide/ios/troubleshooting.md
     - Cordova:
       - Overview: developer-guide/cordova/overview.md
       - Android: developer-guide/cordova/android.md
@@ -73,6 +81,5 @@ pages:
     - Windows: developer-guide/windows/overview.md
   - Samples:
     - Android: samples/samples.md
-  - API Reference: 
+  - API Reference:
       - Reference: reference.md
-
