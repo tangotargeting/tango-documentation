@@ -1054,8 +1054,9 @@ end
         </div>
     
         <div role="tabpanel" class="tab-pane " id="tab-1-objc">
-            <div class="codehilite"><pre><span></span><span class="c1">//Modify the notification content here...</span>
+            <div class="codehilite"><pre><span></span><span class="c1">// Modify the notification content here...</span>
 <span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ [modified]&quot;</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span><span class="p">];</span>
+
 <span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">);</span>
 </pre></div>
 
@@ -1072,18 +1073,18 @@ end
         <ul class="nav nav-tabs">
             
         <li class="nav-item active">
-            <a href="#tab-2-swift" aria-controls="tab-2-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
+            <a href="#tab-8-swift" aria-controls="tab-8-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
         </li>
     
         <li class="nav-item ">
-            <a href="#tab-2-objc" aria-controls="tab-2-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
+            <a href="#tab-8-objc" aria-controls="tab-8-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
         </li>
     
         </ul>
     
         <div class="tab-content">
             
-        <div role="tabpanel" class="tab-pane active" id="tab-2-swift">
+        <div role="tabpanel" class="tab-pane active" id="tab-8-swift">
             <div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
     <span class="n">TangoRichNotification</span><span class="p">.</span><span class="n">setupRichContent</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="n">bestAttemptContent</span><span class="p">,</span>  <span class="n">apiKey</span><span class="p">:</span> <span class="s">&quot;your-tango-sdk-key&quot;</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="k">in</span> <span class="n">contentHandler</span><span class="p">(</span><span class="n">content</span><span class="p">)})</span>
 <span class="p">}</span>
@@ -1091,7 +1092,7 @@ end
 
         </div>
     
-        <div role="tabpanel" class="tab-pane " id="tab-2-objc">
+        <div role="tabpanel" class="tab-pane " id="tab-8-objc">
             <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">TangoRichNotification</span> <span class="nl">setupRichContentWithContent</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span> <span class="nl">apiKey</span><span class="p">:</span><span class="s">@&quot;your-tango-sdk-key&quot;</span> <span class="nl">completionHandler</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">];</span>
 </pre></div>
 
@@ -1101,9 +1102,6 @@ end
     
                 </div>
                     </p>
-<div class="admonition info">
-<p>The <code>NotificationService</code> class has the same name as your notification service extension.</p>
-</div>
                 
                   
                 
