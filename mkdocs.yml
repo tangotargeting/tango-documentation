@@ -67,10 +67,12 @@ pages:
       - Handle custom actions: developer-guide/android/handle-custom-actions.md
       - Trigger automated campaigns: developer-guide/android/trigger-automated-campaigns.md
       - Manage tags: developer-guide/android/manage-tags.md
-      - Monitor Applications Usage (Advanced): developer-guide/android/usage.md
+      - Monitor applications usage (Advanced): developer-guide/android/usage.md
     - iOS:
       - Installation: developer-guide/ios/installation.md
       - Prepare and initialize: developer-guide/ios/prepare-and-initialize.md
+      - Push notifications setup: developer-guide/ios/push-notifications-setup.md
+      - Tango Rich Notifications setup: developer-guide/ios/tango-rich-notifications-setup.md 
       - Handle custom actions: developer-guide/ios/handle-custom-actions.md
       - Trigger automated campaigns: developer-guide/ios/trigger-automated-campaigns.md
       - Manage tags: developer-guide/ios/manage-tags.md
