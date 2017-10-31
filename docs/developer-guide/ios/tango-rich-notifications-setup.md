@@ -47,8 +47,9 @@ if let bestAttemptContent = bestAttemptContent {
 ```
 
 ```objc fct_label="Objective-C"
-//Modify the notification content here...
+// Modify the notification content here...
 self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [modified]", self.bestAttemptContent.title];
+
 self.contentHandler(self.bestAttemptContent);
 ```
 
@@ -62,6 +63,3 @@ if let bestAttemptContent = bestAttemptContent {
 ```objc fct_label="Objective-C"
 [TangoRichNotification setupRichContentWithContent:self.bestAttemptContent apiKey:@"your-tango-sdk-key" completionHandler:self.contentHandler];
 ```
-
-!!! info ""
-    The `NotificationService` class has the same name as your notification service extension.
