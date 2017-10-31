@@ -598,8 +598,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../android/usage/" title="Monitor Applications Usage (Advanced)" class="md-nav__link">
-      Monitor Applications Usage (Advanced)
+    <a href="../../android/usage/" title="Monitor applications usage (Advanced)" class="md-nav__link">
+      Monitor applications usage (Advanced)
     </a>
   </li>
 
@@ -677,26 +677,36 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tangorichnotification-framework" title="TangoRichNotification framework" class="md-nav__link">
-    TangoRichNotification framework
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test" title="Test" class="md-nav__link">
-    Test
-  </a>
-  
-</li>
-      
       
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push-notifications-setup/" title="Push notifications setup" class="md-nav__link">
+      Push notifications setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tango-rich-notifications-setup/" title="Tango Rich Notifications setup" class="md-nav__link">
+      Tango Rich Notifications setup
+    </a>
   </li>
 
         
@@ -927,20 +937,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#tangorichnotification-framework" title="TangoRichNotification framework" class="md-nav__link">
-    TangoRichNotification framework
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test" title="Test" class="md-nav__link">
-    Test
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -958,9 +954,9 @@
                 
                   <h1>Prepare and initialize</h1>
                 
-                <p>After adding the framework into the project by following the <a href="../installation/">Installation</a> guide, modify your source code to finalize the integration:</p>
+                <p>Please follow the steps bellow to integrate Tango into your project:</p>
 <h3 id="tango-framework">Tango framework<a class="headerlink" href="#tango-framework" title="Permanent link">&para;</a></h3>
-<p>Open your project AppDelegate.m file and import the Tango framework.</p>
+<p>Open your project's AppDelegate file and import the Tango framework.</p>
 <p>
                 <div class="code-nav-container">
                     
@@ -997,7 +993,7 @@
     
                 </div>
                     </p>
-<p>Add <code>UNUserNotificationCenterDelegate</code> in app delegate:</p>
+<p>The <code>UNUserNotificationCenterDelegate</code> protocol defines methods for responding to actionable notifications. So, to respond to the action, let&rsquo;s have <code>AppDelegate</code> implement the <code>UNUserNotificationCenterDelegate</code> protocol:</p>
 <p>
                 <div class="code-nav-container">
                     
@@ -1073,10 +1069,8 @@
                     </p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>To find your Tango API KEY <a href="https://app.tangotargeting.com/">Go to Console <i class="fa fa-external-link"></i></a> and locate the card <strong>Tango SDK Key</strong>
-<img alt="Dashboard Overview" src="../../../images/content/locate-apikey-overview.png" />
-then hover it and click the copy icon on the right.
-<img alt="Tango SDK Key" src="../../../images/content/locate-api-key-copy.png" /></p>
+<p>To find your Tango API KEY <a href="https://app.tangotargeting.com/">Go to Console <i class="fa fa-external-link"></i></a> and locate the card <strong>Tango SDK Key</strong>, then hover it and click the copy icon on the right side.
+<a href="../../../images/content/locate-apikey-overview.png"><img alt="Dashboard Overview" src="../../../images/content/locate-apikey-overview.png" /></a></p>
 </div>
 <p>After that you should implement the following delegate methods.</p>
 <p>
@@ -1216,123 +1210,10 @@ then hover it and click the copy icon on the right.
     
                 </div>
                     </p>
-<p><strong><em>Important:</em></strong> If you are going to use a location campaign you need to add in your <code>plist</code> the following key: <code>NSLocationAlwaysUsageDescription</code>.</p>
-<h3 id="tangorichnotification-framework">TangoRichNotification framework<a class="headerlink" href="#tangorichnotification-framework" title="Permanent link">&para;</a></h3>
-<p>Open the <code>NotificationService</code> class you have created following the <a href="https://github.com/tangotargeting/tango-documentation/wiki/Installation---iOS">Installation Guide</a> and add the following import:</p>
-<p>
-                <div class="code-nav-container">
-                    
-        <ul class="nav nav-tabs">
-            
-        <li class="nav-item active">
-            <a href="#tab-5-swift" aria-controls="tab-5-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
-        </li>
-    
-        <li class="nav-item ">
-            <a href="#tab-5-objc" aria-controls="tab-5-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
-        </li>
-    
-        </ul>
-    
-        <div class="tab-content">
-            
-        <div role="tabpanel" class="tab-pane active" id="tab-5-swift">
-            <div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">TangoRichNotification</span>
-</pre></div>
-
-        </div>
-    
-        <div role="tabpanel" class="tab-pane " id="tab-5-objc">
-            <div class="codehilite"><pre><span></span><span class="cp">#import &lt;UserNotifications/UserNotifications.h&gt;</span>
-<span class="cp">#import &lt;TangoRichNotification/TangoRichNotification-Swift.h&gt;</span>
-<span class="cp">#import &lt;TangoRichNotification/TangoRichNotification.h&gt;</span>
-</pre></div>
-
-        </div>
-    
-        </div>
-    
-                </div>
-                    </p>
-<p>Then, in the <code>didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent)</code> method replace the following code:</p>
-<p>
-                <div class="code-nav-container">
-                    
-        <ul class="nav nav-tabs">
-            
-        <li class="nav-item active">
-            <a href="#tab-6-swift" aria-controls="tab-6-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
-        </li>
-    
-        <li class="nav-item ">
-            <a href="#tab-6-objc" aria-controls="tab-6-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
-        </li>
-    
-        </ul>
-    
-        <div class="tab-content">
-            
-        <div role="tabpanel" class="tab-pane active" id="tab-6-swift">
-            <div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
-    <span class="c1">// Modify the notification content here...</span>
-    <span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="s">&quot;</span><span class="si">\(</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span><span class="si">)</span><span class="s"> [modified]&quot;</span>
-    <span class="n">contentHandler</span><span class="p">(</span><span class="n">bestAttemptContent</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-        </div>
-    
-        <div role="tabpanel" class="tab-pane " id="tab-6-objc">
-            <div class="codehilite"><pre><span></span><span class="c1">//Modify the notification content here...</span>
-<span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithFormat</span><span class="p">:</span><span class="s">@&quot;%@ [modified]&quot;</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">.</span><span class="n">title</span><span class="p">];</span>
-<span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span><span class="p">);</span>
-</pre></div>
-
-        </div>
-    
-        </div>
-    
-                </div>
-                    </p>
-<p>with:</p>
-<p>
-                <div class="code-nav-container">
-                    
-        <ul class="nav nav-tabs">
-            
-        <li class="nav-item active">
-            <a href="#tab-7-swift" aria-controls="tab-7-swift" role="tab" data-toggle="tab" data-lang="swift">Swift</a>
-        </li>
-    
-        <li class="nav-item ">
-            <a href="#tab-7-objc" aria-controls="tab-7-objc" role="tab" data-toggle="tab" data-lang="objc">Objective-C</a>
-        </li>
-    
-        </ul>
-    
-        <div class="tab-content">
-            
-        <div role="tabpanel" class="tab-pane active" id="tab-7-swift">
-            <div class="codehilite"><pre><span></span><span class="k">if</span> <span class="kd">let</span> <span class="nv">bestAttemptContent</span> <span class="p">=</span> <span class="n">bestAttemptContent</span> <span class="p">{</span>
-    <span class="n">TangoRichNotification</span><span class="p">.</span><span class="n">setupRichContent</span><span class="p">(</span><span class="n">content</span><span class="p">:</span> <span class="n">bestAttemptContent</span><span class="p">,</span>  <span class="n">apiKey</span><span class="p">:</span> <span class="s">&quot;your-tango-sdk-key&quot;</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="k">in</span> <span class="n">contentHandler</span><span class="p">(</span><span class="n">content</span><span class="p">)})</span>
-<span class="p">}</span>
-</pre></div>
-
-        </div>
-    
-        <div role="tabpanel" class="tab-pane " id="tab-7-objc">
-            <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">TangoRichNotification</span> <span class="nl">setupRichContentWithContent</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">bestAttemptContent</span> <span class="nl">apiKey</span><span class="p">:</span><span class="s">@&quot;your-tango-sdk-key&quot;</span> <span class="nl">completionHandler</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">contentHandler</span><span class="p">];</span>
-</pre></div>
-
-        </div>
-    
-        </div>
-    
-                </div>
-                    </p>
-<h3 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
-<p>At this point you should be ready to go. To test if the installation succeeded you should enter the Tango Targeting account then create and activate some campaigns. The easiest way is to create a real-time campaign but it pays off to test all campaigns as some of them have specific needs(like location permissions).</p>
-<p>If a campaign doesn't trigger it is possible it did not reach the device yet as the synchronization is triggered approximately every ten minutes. To go around this, you could simply restart the application and a synchronization will immediately trigger. Note that real-time campaigns don't need any synchronization to work.</p>
+<div class="admonition important">
+<p class="admonition-title">Location tracking</p>
+<p>If you are going to use a location campaign you need to add in your <code>plist</code> the following key: <code>NSLocationAlwaysUsageDescription</code>.</p>
+</div>
                 
                   
                 
@@ -1366,13 +1247,13 @@ then hover it and click the copy icon on the right.
           </a>
         
         
-          <a href="../handle-custom-actions/" title="Handle custom actions" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../push-notifications-setup/" title="Push notifications setup" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handle custom actions
+                Push notifications setup
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -598,8 +598,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../android/usage/" title="Monitor Applications Usage (Advanced)" class="md-nav__link">
-      Monitor Applications Usage (Advanced)
+    <a href="../../android/usage/" title="Monitor applications usage (Advanced)" class="md-nav__link">
+      Monitor applications usage (Advanced)
     </a>
   </li>
 
@@ -672,34 +672,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#ios-10-rich-notifications" title="iOS 10 Rich Notifications" class="md-nav__link">
-    iOS 10 Rich Notifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-capabilities" title="Add capabilities" class="md-nav__link">
-    Add capabilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apns-setup" title="APNS Setup" class="md-nav__link">
-    APNS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-certificate-to-tango" title="Add Certificate to Tango" class="md-nav__link">
-    Add Certificate to Tango
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -717,6 +689,30 @@
   <li class="md-nav__item">
     <a href="../prepare-and-initialize/" title="Prepare and initialize" class="md-nav__link">
       Prepare and initialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../push-notifications-setup/" title="Push notifications setup" class="md-nav__link">
+      Push notifications setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tango-rich-notifications-setup/" title="Tango Rich Notifications setup" class="md-nav__link">
+      Tango Rich Notifications setup
     </a>
   </li>
 
@@ -955,34 +951,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#ios-10-rich-notifications" title="iOS 10 Rich Notifications" class="md-nav__link">
-    iOS 10 Rich Notifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-capabilities" title="Add capabilities" class="md-nav__link">
-    Add capabilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apns-setup" title="APNS Setup" class="md-nav__link">
-    APNS Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-certificate-to-tango" title="Add Certificate to Tango" class="md-nav__link">
-    Add Certificate to Tango
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -1031,51 +999,7 @@ end
 </pre></div>
 
 
-<p>Close your project, go to your project location on disk and open the workspace the newly created <code>.xcworkspace</code> file inside your project directory. Now the framework can be used and for that please follow "How to use" guide.</p>
-<h3 id="ios-10-rich-notifications">iOS 10 Rich Notifications<a class="headerlink" href="#ios-10-rich-notifications" title="Permanent link">&para;</a></h3>
-<p>The library has support for iOS 10 notifications attachments. You can add images and GIF files in a notification. For using this functionality you will need to create a  <a href="https://developer.apple.com/reference/usernotifications/unnotificationserviceextension/">notification service extension</a>.</p>
-<p>Create a new iOS target in Xcode (File -&gt; New -&gt; Target) and select the Notification Service Extension type</p>
-<p><img alt="NotificationServiceExtension image" src="../../../images/content/ios-notification-service-extension.png" /></p>
-<p>Add a new target for notification extension in your podfile. Add TangoRichNotification framework, by adding the following lines to your podspec:</p>
-<div class="codehilite"><pre><span></span>target &#39;NotificationServiceExtesion-Target-Name&#39; do
-  use_frameworks!
-  pod &#39;TangoRichNotification&#39;, &#39;~&gt; 1.0.14&#39;
-end
-</pre></div>
-
-
-<p>After filling Podfile save it and run the following command in a Terminal window:</p>
-<div class="codehilite"><pre><span></span>$ pod install
-</pre></div>
-
-
-<h3 id="add-capabilities">Add capabilities<a class="headerlink" href="#add-capabilities" title="Permanent link">&para;</a></h3>
-<p>For using push notifications you should enable some more capabilities. Go to Xcode select the target&rsquo;s Capabilities pane and enable push notifications:</p>
-<p><img alt="PushNotificatioCapabilities image" src="../../../images/content/ios-enable-push-notifications.png" /></p>
-<p>You should also enable Background Modes an Remote notifications capabilities:</p>
-<p><img alt="BackgroundModes image" src="../../../images/content/ios-enable-background-modes.png" /></p>
-<h3 id="apns-setup">APNS Setup<a class="headerlink" href="#apns-setup" title="Permanent link">&para;</a></h3>
-<p>After you setup the framework in order to use push notification you should create an APNS Certificate which requires membership in the <a href="https://developer.apple.com/programs/">iOS Developer Program</a>.</p>
-<p>Go to <a href="https://developer.apple.com/account/ios/certificate/">Apple Developer Members Center</a>, click on App IDs from Identifiers section, then follow the steps provided below.</p>
-<p><img alt="AppIds image" src="../../../images/content/ios-app-ids.png" /></p>
-<ol>
-<li>Select your app id. If you don't have an app id created select +  button and fill out the form, be sure you check Push Notification checkbox.</li>
-<li>Expand your app by selecting your app id and you will see a field named Push Notifications with yellow or green status icons for development or distribution: <img alt="PushNotificationStatus image" src="../../../images/content/ios-push-notifications-status.png" /></li>
-<li>Click edit button, go to Push Notifications section and press the button <strong>Create Certificate...</strong> for distribution or development.<img alt="CreateCertificate image" src="../../../images/content/ios-create-certificate.png" /> Follow the instructions to create a Certificate Signing Request (CSR) file from your Mac. When you're done, press <strong>Continue</strong>.</li>
-<li>Upload the CSR and after that press download to get the Certificate.</li>
-<li>Open the certificate. Opening the certificate will open Keychain Access.</li>
-<li>Select your certificate from  Keychain Access in My Certificates section. If the certificate is not here try in Certificate section. Right click on it and then Export "Apple iOS Development/Distribution Push Service: your_app_bundle".
-This command will export the certificate in a .p12 file with a password.</li>
-</ol>
-<h3 id="add-certificate-to-tango">Add Certificate to Tango<a class="headerlink" href="#add-certificate-to-tango" title="Permanent link">&para;</a></h3>
-<p>After generating the Push Notification certificate go <a href="https://app.tangotargeting.com/app">here</a> and create a new iOS app:</p>
-<p><img alt="CreateiOSApp image" src="../../../images/content/ios-create-ios-app.png" /></p>
-<p>After that you should fill the form with your app data:
-- insert app bundle id
-- insert app name
-- drag and drop  .p12 file from previous step</p>
-<p><img alt="AddCertificate image" src="../../../images/content/ios-add-certificate.png" /></p>
-<p>Please continue reading the <a href="../../../developer-guide/ios/prepare-and-initialize/">Prepare and initialize</a> chapter, in order to finish integrating Tango SDK into your app.</p>
+<p>Close your project, go to your project location on disk and open the workspace the newly created <code>.xcworkspace</code> file inside your project directory. Continue by reading the <a href="../../../developer-guide/ios/prepare-and-initialize/">Prepare and initialize</a> guide.</p>
                 
                   
                 
@@ -1094,7 +1018,7 @@ This command will export the certificate in a .p12 file with a password.</li>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../android/usage/" title="Monitor Applications Usage (Advanced)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../android/usage/" title="Monitor applications usage (Advanced)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1103,7 +1027,7 @@ This command will export the certificate in a .p12 file with a password.</li>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Monitor Applications Usage (Advanced)
+                Monitor applications usage (Advanced)
               </span>
             </div>
           </a>
