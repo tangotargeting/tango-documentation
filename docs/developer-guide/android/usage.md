@@ -14,7 +14,7 @@ Tango will monitor all user activity and applications on the device. Each applic
 In your app's ``build.gradle`` file add the following dependency.
 
 ```groovy
-compile ('com.tangotargeting:tango-usage:2.2.2') {
+compile ('com.tangotargeting:tango-usage:2.2.3') {
 	transitive = true;
 }
 ```
