@@ -28,7 +28,7 @@ allprojects {
 In your app's root ``build.gradle`` file add the following dependency.
 
 ```groovy
-compile ('com.tangotargeting:tango:2.2.3') {
+compile ('com.tangotargeting:tango:2.2.6') {
 	transitive = true;
 }
 ```
